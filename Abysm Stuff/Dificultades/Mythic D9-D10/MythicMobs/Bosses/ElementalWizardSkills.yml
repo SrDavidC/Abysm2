@@ -1,0 +1,960 @@
+MinePlacing:
+  Skills:
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+  - summon{type=MineDummy;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+MineAttack:
+  Skills:
+  - damage{a=1;ia=true} @NearestPlayer{r=2}
+  Conditions:
+  - playerwithin{d=2}
+TurretPhaseBegin:
+  Skills:
+  - message{m=&f&lAldolf Van Asteria, &7&lLet me out of this seal please...} @PIR{r=40}
+  - delay 20
+  - message{m=&5&lThe Dark Prince, &7&lNOT NOW!} @PIR{r=40}
+  - delay 20
+  - message{m=&5&lThe Dark Prince, &7&lTURRETS!!!} @PIR{r=40}
+  - delay 30
+  - randomskill{Skills=TurretStart} @self
+MinePhaseBegin:
+  Skills:
+  - message{m=&5&lThe Dark Prince, &7&lNO NOT NOW, MY POWER WON’T RELEASE NOW!} @PIR{r=40}
+  - delay 20
+  - message{m=&5&lThe Dark Prince, &7&lEXPLOSIVE MINES!!!} @PIR{r=40}
+  - randomskill{Skills=MinePlacing} @self
+FinaleBegin:
+  Skills:
+  - potion{type=RESISTANCE;d=1000;level=10} @self
+  - heal{a=9999999;repeat=2;repeatInterval=300} @self
+  - message{m=&f&lAldolf Van Asteria, &7&lHero... help me please and free me from this madness... please just let me go...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lAldolf Van Asteria, &7&lWith the elements of &4&lFire} @PIR{r=40}
+  - delay 5
+  - effect:particlesphere{particle=flame;amount=150;radius=3} @self
+  - delay 35
+  - message{m=&f&lAldolf Van Asteria, &1&lWater} @PIR{r=40}
+  - delay 5
+  - effect:particlesphere{particle=bubble;amount=400;radius=3} @self
+  - delay 35
+  - message{m=&f&lAldolf Van Asteria, &7&land &6&lEarth} @PIR{r=40}
+  - delay 5
+  - effect:particlesphere{particle=crit;amount=250;radius=3} @self
+  - delay 35
+  - message{m=&f&lAldolf Van Asteria, &7&lI will break free from your curse DARK PRINCE!} @PIR{r=40}
+  - effect:particlesphere{particle=flame;amount=150;radius=3} @self
+  - delay 10
+  - effect:particlesphere{particle=bubble;amount=400;radius=3} @self
+  - delay 10
+  - effect:particlesphere{particle=crit;amount=250;radius=3} @self
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=150;radius=3} @self
+  - delay 5
+  - effect:particlesphere{particle=bubble;amount=400;radius=3} @self
+  - delay 5
+  - effect:particlesphere{particle=crit;amount=250;radius=3} @self
+  - delay 5
+  - effect:particlesphere{particle=flame;amount=150;radius=3} @self
+  - delay 3
+  - effect:particlesphere{particle=bubble;amount=400;radius=3} @self
+  - delay 3
+  - effect:particlesphere{particle=crit;amount=250;radius=3} @self
+  - delay 3
+  - effect:particlesphere{particle=flame;amount=150;radius=3} @self
+  - delay 1
+  - effect:particlesphere{particle=bubble;amount=400;radius=3} @self
+  - delay 1
+  - effect:particlesphere{particle=crit;amount=250;radius=3} @self
+  - delay 1
+  - effect:particlesphere{particle=flame;amount=150;radius=3;repeat=100;repeatInterval=1} @self
+  - effect:particlesphere{particle=bubble;amount=400;radius=3;repeat=100;repeatInterval=1} @self
+  - effect:particlesphere{particle=crit;amount=250;radius=3;repeat=100;repeatInterval=1} @self
+  - delay 140
+  - summon{type=ElementalWizardFinale;amount=1;radius=0} @Location{c=726,64,1007}
+  - suicide @self
+FinaleBeginP2:
+  Skills:
+  - potion{type=GLOW;d=99999;repeat=100;repeatInterval=99999} @self
+  - effect:particlesphere{particle=cloud;amount=100;radius=3;repeat=50;repeatInterval=1} @self
+  - message{m=&5&lThe Dark Prince, &7&lHehehehe not yet...} @PIR{r=40}
+  - delay 40
+  - message{m=&5&lThe Dark Prince, &7&lYou think im done yet?} @PIR{r=40}
+  - delay 40
+  - message{m=&5&lThe Dark Prince, &7&lOh you are so wrong...} @PIR{r=40}
+  - delay 40
+  - message{m=&5&lThe Dark Prince, &7&lYou know what? How about I take your little friends powers and use them for my own?} @PIR{r=40}
+  - randomskill{Skills=LightSkillStart} @self
+TurretStart:
+  Skills:
+  - randomskill{Skills=FireTurretStart,WaterTurretStart,GroundTurretStart;repeat=999;repeatInterval=1000} @self
+FireTurretStart:
+  Skills:
+  - summon{type=FireTurret;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+WaterTurretStart:
+  Skills:
+  - summon{type=WaterTurret;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+GroundTurretStart:
+  Skills:
+  - summon{type=EarthTurret;amount=1;radius=0} @Location{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*}
+LightSkillStart:
+  Skills:
+  - delay 60
+  - message{m=&4&lThe grand archmage is preparing an attack...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lLIGHT!} @PIR{r=40}
+  - randomskill{Skills=LightSpin,LightLob,LightBeam,LightHoming} @self
+SkillStart:
+  Skills:
+  - delay 20
+  - message{m=&4&lThe grand archmage is preparing an attack...} @PIR{r=40}
+  - delay 40
+  - randomskill{Skills=SpinStart,LobStart,BeamStart,HomingStart}
+SpinStart:
+  Skills:
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lSPIN!} @PIR{r=40}
+  - randomskill{Skills=FireSpin,WaterSpin,EarthSpin} @self
+LobStart:
+  Skills:
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lLOB!} @PIR{r=40}
+  - randomskill{Skills=FireLob,WaterLob,EarthLob} @self
+BeamStart:
+  Skills:
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lBEAM!} @PIR{r=40}
+  - randomskill{Skills=FireBeam,WaterBeam,EarthBeam} @self
+HomingStart:
+  Skills:
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lDOUBLE X!} @PIR{r=40}
+  - randomskill{Skills=FireHoming,WaterHoming,EarthHoming} @self 
+LightBeam:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lBEAM!} @PIR{r=40}
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - projectile{onTick=LightBeam-Tick;onHit=LightBeam-Hit;i=1;v=20;ho=-10;sB=false;sE=false;hs=true;repeat=500;repeatInterval=1} @Target
+  - delay 640
+  - randomskill{Skills=LightSkillStart}
+LightBeam-Tick:
+  Skills:
+  - effect:particles{particle=cloud;a=35;hs=0.2;vs=0.2}
+LightBeam-Hit:
+  Skills:
+  - damage{a=45}
+  - potion{type=SLOWNESS;d=20;level=3}
+  - potion{type=WEAKNESS;d=300;level=3}
+  - heal{a=5} @self
+FireBeam:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lFIRE!} @PIR{r=40}
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - projectile{onTick=FireTurretProjectile-Tick;onHit=FireTurretProjectile-Hit;i=1;v=20;ho=-10;sB=false;sE=false;hs=true;repeat=250;repeatInterval=1} @Target
+  - delay 390
+  - randomskill{Skills=SkillStart}
+WaterBeam:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lWATER!} @PIR{r=40}
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - projectile{onTick=WaterTurretProjectile-Tick;onHit=WaterTurretProjectile-Hit;i=1;v=20;ho=-10;sB=false;sE=false;hs=true;repeat=250;repeatInterval=1} @Target
+  - delay 390
+  - randomskill{Skills=SkillStart}
+EarthBeam:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lEARTH!} @PIR{r=40}
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - projectile{onTick=EarthTurretProjectile-Tick;onHit=EarthTurretProjectile-Hit;i=1;v=15;ho=-10;sB=false;sE=false;hs=true;repeat=250;repeatInterval=1} @Target
+  - delay 390
+  - randomskill{Skills=SkillStart}
+FireHoming:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lFIRE!} @PIR{r=40}
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=REDSTONE_BLOCK;onTick=FireHoming-Tick;onHit=FireHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - randomskill{Skills=SkillStart}
+FireHoming-Tick:
+  Skills:
+  - effect:particles{particle=flame;a=10;hs=0.2;vs=0.2}
+FireHoming-Hit:
+  Skills:
+  - damage{a=7;ia=true}
+  - ignite{t=100}
+WaterHoming:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lWATER!} @PIR{r=40}
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1} @self
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIAMOND_BLOCK;onTick=WaterHoming-Tick;onHit=WaterHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - randomskill{Skills=SkillStart}
+WaterHoming-Tick:
+  Skills:
+  - effect:particles{particle=bubble;a=100;hs=0.2;vs=0.2}
+WaterHoming-Hit:
+  Skills:
+  - damage{a=3;ia=true}
+  - heal{a=5} @self
+EarthHoming:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lEARTH!} @PIR{r=40}
+  - effect:particles{particle=crit;a=85;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=85;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=85;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=85;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=85;hs=1;vs=1} @self
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=DIRT;onTick=EarthHoming-Tick;onHit=EarthHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - randomskill{Skills=SkillStart}
+EarthHoming-Tick:
+  Skills:
+  - effect:particles{particle=crit;a=50;hs=0.2;vs=0.2}
+EarthHoming-Hit:
+  Skills:
+  - damage{a=55}
+LightHoming:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lDOUBLE X!} @PIR{r=40}
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=cloud;a=50;hs=1;vs=1} @self
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - delay 40
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=-5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=0;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=5;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - projectile{bulletType=ITEM;material=IRON_BLOCK;onTick=LightHoming-Tick;onHit=LightHoming-Hit;i=1;v=10;ho=0;sB=false;sE=false;sso=10;hR=0.25;hS=true} @NearestPlayer{r=50}
+  - randomskill{Skills=LightSkillStart}
+LightHoming-Tick:
+  Skills:
+  - effect:particles{particle=cloud;a=35;hs=0.2;vs=0.2}
+LightHoming-Hit:
+  Skills:
+  - damage{a=10;ia=true}
+  - potion{type=SLOWNESS;d=300;level=3}
+  - potion{type=WEAKNESS;d=300;level=3}
+  - heal{a=5} @self
+FireTurretProjectile:
+  Skills:
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - projectile{onTick=FireTurretProjectile-Tick;onHit=FireTurretProjectile-Hit;i=1;v=20;ho=0;sB=false;sE=false} @NearestPlayer{r=50}
+FireTurretProjectile-Tick:
+  Skills:
+  - effect:particles{particle=flame;a=20;hs=0.2;vs=0.2}
+FireTurretProjectile-Hit:
+  Skills:
+  - damage{a=5;ia=true}
+  - ignite{t=100}
+WaterTurretProjectile:
+  Skills:
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=150;hs=1;vs=1;i=1} @self
+  - projectile{onTick=WaterTurretProjectile-Tick;onHit=WaterTurretProjectile-Hit;i=1;v=17;ho=0;sB=false;sE=false} @NearestPlayer{r=50}
+WaterTurretProjectile-Tick:
+  Skills:
+  - effect:particles{particle=bubble;a=250;hs=0.2;vs=0.2;i=1}
+WaterTurretProjectile-Hit:
+  Skills:
+  - damage{a=5;ia=true}
+  - heal{a=5} @MIR{r=15;t=IRON_GOLEM}
+EarthTurretProjectile:
+  Skills:
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=75;hs=1;vs=1;i=1} @self
+  - projectile{onTick=EarthTurretProjectile-Tick;onHit=EarthTurretProjectile-Hit;i=1;v=15;ho=0;sB=false;sE=false} @NearestPlayer{r=50}
+EarthTurretProjectile-Tick:
+  Skills:
+  - effect:particles{particle=crit;a=250;hs=0.2;vs=0.2;i=1}
+EarthTurretProjectile-Hit:
+  Skills:
+  - damage{a=55}
+FireSpin:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lFIRE!} @PIR{r=40}
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=flame;a=35;hs=1;vs=1} @self
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=0;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=20;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=40;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=60;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=80;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=100;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=120;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=140;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=160;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=180;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-160;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-140;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-120;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-100;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-80;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-60;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-40;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-20;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=0;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=20;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=40;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=60;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=80;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=100;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=120;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=140;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=160;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=180;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-160;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-140;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-120;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-100;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-80;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-60;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-40;sB=false;hs=true;sE=false} @Target
+  - delay 5
+  - projectile{onTick=FireSpin-Tick;onHit=FireSpin-Hit;i=1;v=20;ho=-20;sB=false;hs=true;sE=false} @Target
+  - delay 140
+  - randomskill{Skills=SkillStart}
+FireSpin-Tick:
+  Skills:
+  - effect:particles{particle=flame;a=20;hs=0.2;vs=0.2}
+FireSpin-Hit:
+  Skills:
+  - damage{a=5;ia=true}
+  - ignite{t=100}
+WaterSpin:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lWATER!} @PIR{r=40}
+  - effect:particles{particle=bubble;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=bubble;a=100;hs=1;vs=1} @self
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=10;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=30;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=50;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=70;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=90;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=110;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=130;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=150;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=170;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-170;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-150;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-130;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-110;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-90;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-70;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-50;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-30;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-10;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=10;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=30;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=50;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=70;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=90;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=110;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=130;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=150;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=170;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-170;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-150;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-130;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-110;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-90;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-70;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-50;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-30;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=WaterSpin-Tick;onHit=WaterSpin-Hit;i=1;v=10;ho=-10;sB=false;hs=true} @Target
+  - delay 140
+  - randomskill{Skills=SkillStart}
+WaterSpin-Tick:
+  Skills:
+  - effect:particles{particle=bubble;a=200;hs=0.2;vs=0.2}
+WaterSpin-Hit:
+  Skills:
+  - damage{a=5;ia=true}
+  - heal{a=5} @self
+EarthSpin:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lEARTH!} @PIR{r=40}
+  - effect:particles{particle=crit;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=100;hs=1;vs=1} @self
+  - delay 5
+  - effect:particles{particle=crit;a=100;hs=1;vs=1} @self
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=15;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=35;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=55;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=75;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=95;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=115;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=135;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=15;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=175;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-165;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-145;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-125;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-105;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-85;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-65;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-45;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-25;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-5;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=15;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=35;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=55;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=75;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=95;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=115;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=135;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=15;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=175;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-165;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-145;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-125;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-105;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-85;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-65;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-45;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-25;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=EarthSpin-Tick;onHit=EarthSpin-Hit;i=1;v=7;ho=-5;sB=false;hs=true} @Target
+  - delay 140
+  - randomskill{Skills=SkillStart}
+EarthSpin-Tick:
+  Skills:
+  - effect:particles{particle=crit;a=200;hs=0.2;vs=0.2}
+EarthSpin-Hit:
+  Skills:
+  - damage{a=75}
+  - potion{type=SLOWNESS;d=300;level=3}
+LightSpin:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lSPIN!} @PIR{r=40}
+  - effect:particles{particle=cloud;a=100;hs=1;vs=1}
+  - delay 5
+  - effect:particles{particle=cloud;a=100;hs=1;vs=1}
+  - delay 5
+  - effect:particles{particle=cloud;a=100;hs=1;vs=1}
+  - delay 5
+  - effect:particles{particle=cloud;a=100;hs=1;vs=1}
+  - delay 5
+  - effect:particles{particle=cloud;a=100;hs=1;vs=1}
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=5;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=25;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=45;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=65;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=85;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=105;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=125;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=145;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=165;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-175;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-155;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-135;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-115;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-95;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-75;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-55;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-35;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-15;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=5;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=25;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=45;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=65;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=85;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=105;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=125;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=145;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=165;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-175;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-155;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-135;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-115;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-95;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-75;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-55;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-35;sB=false;hs=true} @Target
+  - delay 5
+  - projectile{onTick=LightSpin-Tick;onHit=LightSpin-Hit;i=1;v=20;ho=-15;sB=false;hs=true} @Target
+  - delay 140
+  - randomskill{Skills=LightSkillStart}
+LightSpin-Tick:
+  Skills:
+  - effect:particles{particle=cloud;a=50;hs=0.2;vs=0.2}
+LightSpin-Hit:
+  Skills:
+  - damage{a=10;ia=true}
+  - potion{type=SLOWNESS;d=300;level=3}
+  - potion{type=WEAKNESS;d=300;level=3}
+  - heal{a=5} @self
+FireLobTwo:
+  Skills:
+  - projectile{onTick=FireLobTwo-Tick;onHit=FireLobTwo-Hit;i=1;v=20;ho=0;sB=false;hs=true} @Ring{radius=5;points=4}
+FireLobTwo-Tick:
+  Skills:
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1}
+FireLobTwo-Hit:
+  Skills:
+  - damage{a=15}
+  - ignite{d=100}
+FireLob:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lFIRE!} @PIR{r=40}
+  - potion{type=SLOWNESS;d=200;level=10} @self
+  - projectile{onTick=FireLob-Tick;onHit=FireLob-Hit;i=1;v=20;ho=15;vo=7;g=1;mr=100;onEnd=FireLob-End;sP=false} @Ring{radius=10;points=8}
+  - delay 40
+  - projectile{onTick=FireLob-Tick;onHit=FireLob-Hit;i=1;v=22;ho=15;vo=7;g=1;mr=100;onEnd=FireLob-End;sP=false} @Ring{radius=10;points=8}
+  - delay 40
+  - projectile{onTick=FireLob-Tick;onHit=FireLob-Hit;i=1;v=21;ho=15;vo=7;g=1;mr=100;onEnd=FireLob-End;sP=false} @Ring{radius=10;points=8}
+  - delay 140
+  - randomskill{Skills=SkillStart}
+FireLob-Tick:
+  Skills:
+  - effect:particles{particle=flame;a=125;hs=0.1;vs=0.1}
+FireLob-End:
+  Skills:
+  - summon{type=FireLobTwoDummy;amount=1;radius=0}
+FireLob-Hit:
+  Skills:
+  - damage{a=25}
+  - ignite{d=200}
+WaterLobTwo:
+  Skills:
+  - projectile{onTick=WaterLobTwo-Tick;onHit=WaterLobTwo-Hit;i=1;v=10;ho=0;sB=false;hs=true;mr=100} @Ring{radius=3;points=2}
+WaterLobTwo-Tick:
+  Skills:
+  - effect:particles{particle=bubble;a=125;hs=0.1;vs=0.1}
+WaterLobTwo-Hit:
+  Skills:
+  - damage{a=15}
+  - heal{a=5} @self
+WaterLob:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lWATER!} @PIR{r=40}
+  - potion{type=SLOWNESS;d=200;level=10} @self
+  - projectile{onTick=WaterLob-Tick;onHit=WaterLob-Hit;i=1;v=20;ho=15;vo=7;g=1;mr=100;onEnd=WaterLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 40
+  - projectile{onTick=WaterLob-Tick;onHit=WaterLob-Hit;i=1;v=25;ho=15;vo=7;g=1;mr=100;onEnd=WaterLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 40
+  - projectile{onTick=WaterLob-Tick;onHit=WaterLob-Hit;i=1;v=22;ho=15;vo=7;g=1;mr=100;onEnd=WaterLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 140
+  - randomskill{Skills=SkillStart}
+WaterLob-Tick:
+  Skills:
+  - effect:particles{particle=bubble;a=200;hs=0.1;vs=0.1}
+WaterLob-End:
+  Skills:
+  - summon{type=WaterLobTwoDummy;amount=1;radius=0}
+WaterLob-Hit:
+  Skills: 
+  - damage{a=25}
+  - heal{a=5} @self
+EarthLobTwo:
+  Skills:
+  - effect:particles{particle=explosion_normal;a=50;hs=0.1;vs=0.1}
+  - damage{a=10} @PIR{r=3.1}
+  - throw{v=5;vy=2} @PIR{r=3.1}
+EarthLob:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe element chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lEARTH!} @PIR{r=40}
+  - potion{type=SLOWNESS;d=200;level=10} @self
+  - projectile{onTick=EarthLob-Tick;onHit=EarthLob-Hit;i=1;v=20;ho=15;vo=7;g=0.7;mr=100;onEnd=EarthLob-End;sP=false} @Ring{radius=16;points=32}
+  - delay 40
+  - projectile{onTick=EarthLob-Tick;onHit=EarthLob-Hit;i=1;v=40;ho=15;vo=7;g=0.7;mr=100;onEnd=EarthLob-End;sP=false} @Ring{radius=16;points=32}
+  - delay 40
+  - projectile{onTick=EarthLob-Tick;onHit=EarthLob-Hit;i=1;v=30;ho=15;vo=7;g=0.7;mr=100;onEnd=EarthLob-End;sP=false} @Ring{radius=16;points=32}
+  - delay 140
+  - randomskill{Skills=SkillStart}
+EarthLob-Tick:
+  Skills:
+  - effect:particles{particle=crit;a=200;hs=0.2;vs=0.2}
+EarthLob-End:
+  Skills:
+  - summon{type=EarthLobTwoDummy;amount=1;radius=0}
+EarthLob-Hit:
+  Skills: 
+  - damage{a=15;ia=true}
+  - potion{type=SLOWNESS;d=50;level=10}
+LightLobTwo:
+  Skills:
+  - projectile{onTick=LightLobTwo-Tick;onHit=LightLobTwo-Hit;i=1;v=20;ho=0;sB=false;hs=true;mr=100} @Ring{radius=3;points=4}
+LightLobTwo-Tick:
+  Skills:
+  - effect:particles{particle=cloud;a=50;hs=0.1;vs=0.1}
+LightLobTwo-Hit:
+  Skills:
+  - damage{a=35}
+  - potion{type=WEAKNESS;d=300;level=3}
+  - heal{a=5} @self
+LightLob:
+  Skills:
+  - delay 40
+  - message{m=&f&lThe type chosen was...} @PIR{r=40}
+  - delay 40
+  - message{m=&f&lLOB!} @PIR{r=40}
+  - potion{type=SLOWNESS;d=200;level=10} @self
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=0;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=90;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 100
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=45;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=135;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 100
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=0;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - projectile{onTick=LightLob-Tick;onHit=LightLob-Hit;i=1;v=20;ho=90;vo=7;g=1;mr=100;onEnd=LightLob-End;sP=false} @Ring{radius=16;points=16}
+  - delay 140
+  - randomskill{Skills=LightSkillStart}
+LightLob-Tick:
+  Skills:
+  - effect:particles{particle=cloud;a=50;hs=0.1;vs=0.1}
+LightLob-End:
+  Skills:
+  - summon{type=LightLobTwoDummy;amount=1;radius=0}
+LightLob-Hit:
+  Skills: 
+  - damage{a=75}
+  - potion{type=WEAKNESS;d=300;level=3}
+  - heal{a=5} @self

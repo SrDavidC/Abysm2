@@ -1,0 +1,104 @@
+Destructor:
+  Type: WITHER
+  Health: 1000
+  Display: '&4The Destructor Lvl - <mob.level>'
+  Damage: 10
+  Skills:
+  - skill{s=Destructor} @self 0.1
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - summon{type=BrokenDestructor;a=3} @self ~onDeath
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:200
+  - lightning @PlayersInRadius{r=10;d=20} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  LevelModifiers:
+  - Health: 300
+  - Damage: 25
+  KillMessages:
+  - '<target.name> withered from the inside out by the <mob.name>'
+  
+BrokenDestructor:
+  Type: WITHER
+  Health: 500
+  Display: '&4&lBroken &5&lDestructor'
+  Damage: 50
+  Skills:
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - summon{type=MiniDestructor;a=3} @self ~onDeath
+  - skill{s=Wither} @self 0.1
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:30
+  - lightning @PlayersInRadius{r=10;d=10} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  KillMessages:
+  - '<target.name> was eroded by a <mob.name>'
+  
+MiniDestructor:
+  Type: WITHER
+  Health: 200
+  Display: '&4Mini &5Destructor'
+  Damage: 25
+  Skills:
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - skill{s=Wither} @self 0.1
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:30
+  - lightning @PlayersInRadius{r=10;d=5} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  KillMessages:
+  - '<target.name> was broken down to atoms by aa <mob.name>'
+

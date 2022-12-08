@@ -1,0 +1,347 @@
+#---------------------------------------------------------------------------#
+#                          Made by: ButterflyBullets                        #
+#---------------------------------------------------------------------------#
+
+
+ShadowSkeleton:
+  Type: SKELETON
+  Display: '&aShadow Skeleton Lvl - <mob.level>'
+  Health: 50
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: 'Shadow Skeleton'
+    Range: 20
+    Color: BLUE
+    Style: SEGMENTED_20
+  Skills:
+  - skill{s=ShadowClone} @self 0.1
+  Equipment:
+  - ShadowHelmet HEAD
+  - ShadowChestplate CHEST
+  - ShadowLeggings LEGS
+  - ShadowBoots FEET
+  - ShadowBow HAND
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+    KnockbackResistance: 10
+  Drops:
+  - ShadowSkeletonDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 randomstroll
+  - 2 lookaround
+  - 3 arrowattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 monsters
+  LevelModifiers:
+  - Health: 10
+  - Damage: 2
+  KillMessages:
+  - '<target.name> was massacred by the <mob.name>'
+
+
+#---------------------------------------------------------------------------#
+#                           {Shadow Skeleton SKILLS}                        #
+#---------------------------------------------------------------------------#
+
+ShadowClone:
+  Cooldown: 30
+  Conditions:
+  - targetwithin 10
+  Skills:
+  - effect:
+  - effect:firework{t=3;d=1;f=true;tr=true} @self
+  - summon{mob=ShadowSkeleton;amount=1;noise=5} @Self
+
+#---------------------------------------------------------------------------#
+#                           {Shadow Skeleton ITEMS}                         #
+#---------------------------------------------------------------------------#
+
+ShadowBow:
+  id: BOW
+  Data: 0
+  Amount: 1
+  Display: '&4Bow of Many Souls'
+  Options:
+    Unbreakable: true
+  Lore:
+  - '&4Bow of Many Souls...'
+  - '&aPower V'
+  - '&bPunch V'
+  - '&cFlame III'
+  Enchantments:
+  - POWER:5
+  - FLAME:3
+  - PUNCH:5
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Hand:
+      Health: 10
+
+ShadowHelmet:
+  id: IRON_HELMET
+  Data: 0
+  Amount: 1
+  Display: '&8Helmet of The Shadow Realm'
+  Options:
+    Unbreakable: true
+  Lore:
+  - '&8Helmet of The Shadow Realm'
+  - '&eProjectile Protection C'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:100
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Head:
+      Health: 5
+
+ShadowChestplate:
+  id: DIAMOND_CHESTPLATE
+  Data: 0
+  Amount: 1
+  Display: '&8Chestplate of The Shadow Realm'
+  Options:
+    Unbreakable: true
+  Lore:
+  - '&8Chestplate of The Shadow Realm'
+  - '&eProjectile Protection C'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:100
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Chest:
+      Health: 5
+
+ShadowLeggings:
+  id: IRON_LEGGINGS
+  Data: 0
+  Amount: 1
+  Display: '&8Leggings of The Shadow Realm'
+  Options:
+    Unbreakable: true
+  Lore:
+  - '&8Leggings of The Shadow Realm'
+  - '&eProjectile Protection C'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:100
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Legs:
+      Health: 5
+
+ShadowBoots:
+  id: IRON_BOOTS
+  Data: 0
+  Amount: 1
+  Display: '&8Boots of The Shadow Realm'
+  Options:
+    Unbreakable: true
+  Lore:
+  - '&8Boots of The Shadow Realm'
+  - '&eProjectile Protection C'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:100
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Feet:
+      Health: 5
+      
+ShinyCoin:
+  id: SUNFLOWER
+  Data: 0
+  Amount: 1
+  Display: '&6Shiny Coin'
+  Lore:
+  - '&6Shiny Coin'
+  Enchantments:
+  - MENDING:1
+  Hide:
+  - ENCHANTS
+  
+Coin:
+  id: SUNFLOWER
+  Data: 0
+  Amount: 1
+  Display: '&eCoin'
+  Lore:
+  - '&eCoin'
+  
+SShadowHelmet:
+  id: IRON_HELMET
+  Data: 0
+  Amount: 1
+  Display: '&8Helmet of The Shadow Realm'
+  Lore:
+  - '&8Helmet of The Shadow Realm'
+  - '&eProjectile Protection X'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Head:
+      Health: 5
+
+SShadowChestplate:
+  id: DIAMOND_CHESTPLATE
+  Data: 0
+  Amount: 1
+  Display: '&8Chestplate of The Shadow Realm'
+  Lore:
+  - '&8Chestplate of The Shadow Realm'
+  - '&eProjectile Protection X'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Chest:
+      Health: 5
+
+SShadowLeggings:
+  id: IRON_LEGGINGS
+  Data: 0
+  Amount: 1
+  Display: '&8Leggings of The Shadow Realm'
+  Lore:
+  - '&8Leggings of The Shadow Realm'
+  - '&eProjectile Protection X'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Legs:
+      Health: 5
+
+SShadowBoots:
+  id: IRON_BOOTS
+  Data: 0
+  Amount: 1
+  Display: '&8Boots of The Shadow Realm'
+  Lore:
+  - '&8Boots of The Shadow Realm'
+  - '&eProjectile Protection X'
+  - '&aProtection X'
+  - '&bThorns X'
+  - '&cUnbreaking X'
+  - '&dMending'
+  - '&4+2.5 Hearts'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - THORNS:10
+  - UNBREAKING:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Feet:
+      Health: 5
+
+#---------------------------------------------------------------------------#
+#                           {Shadow Skeleton DROPS}                         #
+#---------------------------------------------------------------------------#
+
+ShadowSkeletonDrops:
+  Conditions:
+  - playerwithin 100
+  Drops:
+  - ShadowSkeletonItemDrops 1
+  - experience 500
+ShadowSkeletonItemDrops:
+  MinItems: 3
+  MaxItems: 8
+  Drops:
+  - ShadowBow 0.1
+  - SShadowHelmet 0.1
+  - SShadowChestplate 0.1
+  - SShadowLeggings 0.1
+  - SShadowBoots 0.1
+  - Coin 1-32 1
+  - ShinyCoin 1-5 1
+  - DIAMOND 1-64 1

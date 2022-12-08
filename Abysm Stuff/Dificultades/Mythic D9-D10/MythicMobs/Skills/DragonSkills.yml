@@ -1,0 +1,47 @@
+#PENDIENTE HACER QUE TODOS LOS END MOBS TENGAN SUPER RESIS A LAS EXPLOSIONES
+
+SummonSk:
+  Cooldown: 120
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> SKELETONS!"} @PlayersInRadius{r=40}
+  - summon{type=ExtasisSkeleton;amount=8;radius=8;l=5} @PIR{r=20}
+  - delay 10
+
+
+SummonTNT:
+  Cooldown: 180
+  Skills:
+  - summon{type=TNTDROP;amount=4;radius=8;l=5} @self
+  - delay 10
+  - summon{type=TNTDROP;amount=4;radius=8;l=5} @self
+  - delay 10
+  - summon{type=TNTDROP;amount=4;radius=8;l=5} @self
+  - delay 10
+
+SummonLights:
+  Cooldown: 80
+  Skills:
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:220
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:240
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:260
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:280
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:300
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:300
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:300
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:300
+  - lightning @RLNTE{a=1;r=5;s=20;minr=3} ~onTimer:300
+
+SummonNightVision:
+  Cooldown: 120
+  Skills:
+  - potion{type=WEAKNESS;duration=100;level=1} @PlayersOnServer
+  - potion{type=NIGHT_VISION;duration=60;level=4;p=false;i=false} @PlayersOnServer
+  - delay 60
+  - potion{type=NIGHT_VISION;duration=60;level=4;p=false;i=false} @PlayersOnServer
+  - delay 60
+  - potion{type=NIGHT_VISION;duration=60;level=4;p=false;i=false} @PlayersOnServer
+  - delay 60
+  - potion{type=NIGHT_VISION;duration=60;level=4;p=false;i=false} @PlayersOnServer
+  - delay 60
+  - potion{type=NIGHT_VISION;duration=60;level=4;p=false;i=false} @PlayersOnServer
+  - delay 60

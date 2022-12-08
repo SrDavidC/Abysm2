@@ -1,0 +1,29 @@
+name: Abysm
+version: '${version}'
+main: abysm.abysm.Abysm
+api-version: 1.17
+authors: [ SrDqrk ]
+permissions:
+  abysm.*:
+      description: Gives access to all Abysm commands
+      children:
+        abysm.debugmode: true
+        abysm.gamemodes: true
+        abysm.totem: true
+        abysm.respawn: true
+  abysm.debugMode:
+      description: Gives access to debug mode
+      default: op
+  abysm.gamemodes:
+      description: Gives access to switch gamemodes
+      default: op
+  abysm.totem:
+      description: Gives access to change the totem failure probability
+      default: op
+  abysm.respawn:
+      description: Gives access to respawn players with their inventory before die
+      default: op
+  abysm.staff:
+    description: Gives access to staff commands
+    default: op
+

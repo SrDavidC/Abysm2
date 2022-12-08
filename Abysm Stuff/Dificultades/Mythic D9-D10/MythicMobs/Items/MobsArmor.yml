@@ -1,0 +1,57 @@
+COS_BlackHead:
+  Id: 298
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackChest:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackLegs:
+  Id: 300
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackFeet:
+  Id: 301
+  Data: 0
+  Options:
+    Color: 10,10,10   
+
+#RIDER PIGMAN
+
+RP_Helmet:
+  Id: 314
+  Data: 0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Options:
+    Unbreakable: true
+
+RP_CHEST:
+  Id: 307
+  Data: 0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  Options:
+    Unbreakable: true
+
+RP_LEGS:
+  Id: 312
+  Data: 0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  Options:
+    Unbreakable: true
+
+RP_BOOTS:
+  Id: 317
+  Data: 0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FALL:20
+  Options:
+    Unbreakable: true
+
+  

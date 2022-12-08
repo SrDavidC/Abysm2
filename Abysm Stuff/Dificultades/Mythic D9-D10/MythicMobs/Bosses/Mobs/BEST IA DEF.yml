@@ -1,0 +1,243 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+CAVE_SPIDER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+WITHER_SKELETON:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+BABY_DROWNED:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+BABY_PIG_ZOMBIE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+BABY_PIG_ZOMBIE_VILLAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+BABY_ZOGLIN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+BABY_ZOMBIE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+BABY_ZOMBIE_VILLAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+CREEPER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+DROWNED:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+ELDER_GUARDIAN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion- 
+ENDERMAN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+ENDERMITE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+EVOKER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+GHAST:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+GUARDIAN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+HOGLIN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+HUSK:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+ILLUSIONER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+MAGMA_CUBE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+PHANTOM:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+PIGLIN:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+PIG_ZOMBIE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+PIG_ZOMBIE_VILLAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+PILLAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+RAVAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+SHULKER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+SILVERFISH:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+SLIME:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+SKELETON:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+SPIDER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+STRAY:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+VEX:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+VINDICATOR:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+WITCH:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+WITHER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+ZOMBIE:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers
+ZOMBIE_VILLAGER:
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction mechalegion
+  - 4 villagers

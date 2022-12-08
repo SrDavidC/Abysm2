@@ -1,0 +1,202 @@
+GhastEquineB:
+  Type: GHAST
+  Display: '&3&lHANS GHAST EQUINEB'
+  Health: 180
+  Damage: 10
+  Options:
+    Despawn: false
+    KnockbackResistance: 0.8
+    PreventRenaming: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+  - ENTITY_ATTACK 0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  AIGoalSelectors:
+  - movetowardstarget
+
+GhastEquineA:
+  Type: GHAST
+  Display: '&4&lHANS GHAST EQUINEA'
+  Health: 180
+  Damage: 10
+  Options:
+    Despawn: false
+    KnockbackResistance: 0.8
+    PreventRenaming: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+  - ENTITY_ATTACK 0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  AIGoalSelectors:
+  - movetowardstarget
+
+test:
+  Type: GHAST
+  Display: '&3&lTEST'
+  Health: 10
+  Damage: 10
+  Options:
+    Despawn: false
+    KnockbackResistance: 0.8
+    PreventRenaming: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+
+ZombiePigmanRider1:
+  Type: PIG_ZOMBIE
+  Health: 120
+  Damage: 10
+  Armor: 4
+  Display: '§6§k§l PIGMAN CEASAR'
+  Skills:
+   - mount{type=GhastEquineA} @Self ~onSpawn
+  Equipment:
+  - RP_Helmet HEAD
+  - RP_CHEST CHEST
+  - RP_LEGS LEGS
+  - RP_BOOTS FEET
+  - RP_SWORDSFIRE HAND
+  Options:
+    Despawn: false
+    KnockbackResistance: 0.5
+    MovementSpeed: 0.35
+    PreventMobKillDrops: true
+    Angry: true
+    Persistent: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+
+  
+ZombiePigmanRider2:
+  Type: PIG_ZOMBIE
+  Health: 120 
+  Damage: 10
+  Armor: 4
+  Display: '§6§k§l PIGMAN CEASAR'
+  Skills:
+   - mount{type=GhastEquineB} @Self ~onSpawn
+  Equipment:
+  - RP_Helmet HEAD
+  - RP_CHEST CHEST
+  - RP_LEGS LEGS
+  - RP_BOOTS FEET
+  - RP_SWORDSHARP HAND
+  Options:
+    Despawn: false
+    KnockbackResistance: 0.5
+    MovementSpeed: 0.35
+    PreventMobKillDrops: true
+    Angry: true
+    Persistent: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+
+ENDCREEPER:
+  Type: CREEPER
+  Display: '&f&l&nEND &0&l&nCREEPER'
+  Health: 15
+  Options:
+    ApplyInvisibility: true
+    PreventRenaming: true
+    SuperCharged: true
+    ExplosionRadius: 7
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+
+DemonGhast:
+  Type: GHAST
+  Health: 100
+  Display: '&e&lGHAST &4&lDEMONIACO'
+  Damage: 20
+  Options:
+    Persistent: true
+    KnockbackResistance: 1
+    PreventRenaming: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+  - ENTITY_ATTACK 0
+
+BadEndCrystal:
+  Type: ENDER_CRYSTAL
+  Display: 'Ender Crystal boom'
+
+DemonEnder:
+  Type: ENDERMAN
+  Display: '&5&lExperimental Demon'
+  Damage: 20
+  Option:
+  - PreventRenaming: true
+  Skills:
+  - potion{type=SPEED;duration=630720000;level=0} @Self ~onSpawn
+  - potion{type=INCREASE_DAMAGE;duration=630720000;level=2} @Self ~onSpawn
+
+
+DemonBlaze:
+  Type: BLAZE
+  Display: '&4&lExperimental &6&lInfernalDemon'
+  Healt: 69
+  Option:
+    KnockbackResistance: 0.3
+    Persistent: true
+    PreventMobKillDrops: true
+    PreventRenaming: true
+  Skills:
+    - consume{d=200;h=20} @MobsInRadius{type=PLAYER;r=20}
+    - effect:flames @self ~onTimer:5
+    - effect:smoke @target ~onTimer:10
+    - effect:smoke{direction=2} @self ~onAttack
+  DamageModifiers:
+  - ENTITY_EXPLOSION -1
+  - BLOCK_EXPLOSION 0
+  - LIGHTNING 0
+
+
+HANSPET:
+  Type: ENDER_DRAGON
+  Display: '&6&lRESURRECTED Ancient Dragon &4&lWRATH'
+  Health: 2000
+  BossBar:
+    Enabled: true
+    Title: '&6RESURRECTED Ancient Dragon WRATH'
+    Color: PINK
+    Style: SOLID
+  Skills:
+    - skill{s=SummonSk} @self 0.3
+    - skill{s=SummonTNT} @self 0.2 
+    - skill{s=SummonLights} @self 0.5
+    - skill{s=SummonNightVision} @self 0.9
+    - skill{s=SummonSk} @self 0.3
+
+TNTDROP:
+  Type: TNT
+  Display: 'TNT drop'
+  Options:
+    Incendiary: false
+    ExplosionYield: 4
+    FuseTicks: 60

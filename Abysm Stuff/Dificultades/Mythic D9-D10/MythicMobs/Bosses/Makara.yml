@@ -1,0 +1,189 @@
+#---------------------------------------------------------------------------#
+#                           byMrSosukee                                     #
+#---------------------------------------------------------------------------#
+#                                                                           #
+#---------------------------------------------------------------------------#
+#                               Mobs                                        #
+#---------------------------------------------------------------------------#
+
+Makara-Lv?:
+    Type: Elder_Guardian
+    Health: 7000
+    Armor: 500
+    Display: '&f&l&k11&l&bMakara&f&l&k11'
+    Damage: 60
+    Drops:
+        - Diamond 1-64 10
+        - Money 500-6000 
+        - Cod 2-6
+    Options: 
+        MovementSpeed: 0.3
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 2
+        FollowRange: 60
+        MaxCombatDistance: 10
+        PreventMobKillDrops: False
+        PreventOtherDrops: False
+        PreventRenaming: False
+    Skills:
+        - skill{s=GolpeMarino-Makara} @target
+        - skill{s=Asfixia-Makara} @target 
+        - skill{s=Refuerzos-Makara2} @target
+        - skill{s=Refuerzos-Makara} @self 
+        - skill{s=Masacre-Players} @target 
+        - skill{s=RafagaMakara} @target
+        - command{c="announcer say &4&l(<trigger.name>) &4&lDerroto a Makara"} @trigger ~onDeath
+    BossBar: 
+        Enabled: True
+        Title: '&f&l&k11&l&bMakara&f&l&k11'
+        Color: RED
+        Style: SOLID
+    Modules:
+     ThreatTable: true
+Makara-M:
+    Type: Guardian
+    Health: 400
+    Armor: 30
+    Display: '&9&lGuardianMakara'
+    Damage: 40
+    Drops:
+        - Cod 0-32
+        - Money 100-1000
+    Options:
+        MovementSpeed: 0.4
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 2
+        FollowRange: 100
+        MaxCombatDistance: 60
+        PreventMobKillDrops: false
+        PreventOtherDrops: true
+        PreventRenaming: true
+    Skills:
+     - damage{a=50;ignorearmor=false} ~onDamage @ThreatTablePlayers
+     - damage{a=50;ignorearmor=false} ~onDamage @RandomThreatTarget
+    Modules:
+     ThreatTable: true
+MakaraDrowned-M:
+    Type: DROWNED
+    Health: 800
+    Armor: 30
+    Display: '&9&lMakaraDrowned'
+    Damage: 40
+    Equipment:
+        - TRIDENT HAND
+    Drops:
+        - xp 300-1000
+        - money 50-500
+        - trident 1 0.01
+    Options:
+        MovementSpeed: 0.4
+        Despawn: true
+        AlwaysShowName: true
+        AttackSpeed: 2
+        FollowRange: 100
+        MaxCombatDistance: 60
+        PreventMobKillDrops: false
+        PreventOtherDrops: true
+        PreventRenaming: true
+        PreventRandomEquipment: true
+    Skills:
+     - damage{a=50;ignorearmor=false} ~onDamage @ThreatTablePlayers
+     - damage{a=50;ignorearmor=false} ~onDamage @RandomThreatTarget
+    Modules:
+     ThreatTable: true
+#---------------------------------------------------------------------------#
+#                               Skills                                      #
+#---------------------------------------------------------------------------#
+GolpeMarino-Makara:
+    Cooldown: 30
+    Skills:
+        - message{cooldown=60;m="<mob.name><&co> &fAtraccion divina!!"} @PlayersInRadius{r=40} ~onTimer:8
+        - pull{v=7;to=true} @PIR{r=40} ~onTimer:12
+        - damage{a=40;i=true} @PIR{r=60} ~onTimer:16
+Asfixia-Makara:
+    Cooldown: 80
+    Skills:
+        - teleport @target
+        #- prison{material=NETHERITE_BLOCK;duration=200;breakable=True} @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - delay 10
+        - effect:lightning @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - damage{a=4:i=true}
+        - damage{a=4:i=true}
+        - damage{a=4:i=true}
+        - delay 10
+        - effect:lightning @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - delay 5
+        - effect:lightning @target
+        - damage{a=4:i=true}
+        - damage{a=4:i=true}
+        - damage{a=4:i=true}
+        - damage{a=4:i=true}
+        - delay 10
+        - effect:lightning @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - effect:lightning @target
+        - delay 5
+        - effect:lightning @target
+        - damage{a=60:i=false}
+        - damage{a=10:i=true}
+Refuerzos-Makara2:
+    Cooldown: 60
+    Skills:
+        - sound{s=mob.wither.death} @self
+        - sound{s=mob.wither.spawn} @self
+        - message{cooldown=60;m="<mob.name><&co> &c&lLevantence y peleen!"} @PlayersInRadius{r=40}
+        - summon{mob=MakaraDrowned-M;amount=4;noise=5} @Self
+Refuerzos-Makara:
+    Cooldown: 120
+    Skills:
+        - sound{s=mob.wither.death} @self
+        - sound{s=mob.wither.spawn} @self
+        - message{cooldown=60;m="<mob.name><&co> &c&lSalgan mis criaturas juntos venceremos!"} @PlayersInRadius{r=40}
+        - summon{mob=Makara-M;amount=2;noise=5} @Self
+Masacre-Players:
+ Cooldown: 200
+ Skills:
+  - message{cooldown=30;m="&8&l<mob.name> &6&lSuficiente!!"} @PlayersInRadius{r=40}
+  - effect:Lightning @PlayersInRadius{r=30}
+  - damage{amount=60;ignorearmor=true} @ThreatTablePlayers
+  - throw{velocity=15;velocityY=0} @PlayersInRadius{r=10}
+  - stun{d=20;f=true} @PlayersInRadius{r=40}
+  - stun{d=20;f=true} @Self
+  - delay 20
+  - stun{d=20;f=true} @PlayersInRadius{r=40}
+  - stun{d=20;f=true} @Self
+  - damage{amount=50;ignorearmor=true} @ThreatTablePlayers
+  - delay 20
+  - stun{d=20;f=true} @PlayersInRadius{r=40}
+  - stun{d=20;f=true} @Self
+  - delay 20
+  - stun{d=20;f=true} @PlayersInRadius{r=40}
+  - stun{d=20;f=true} @Self
+  - damage{amount=100;ignorearmor=true} @RandomThreatTarget
+  - delay 20
+  - effect:Lightning @PlayersInRadius{r=30}
+  - damage{amount=20;ignorearmor=true} @PlayersInRadius{r=30}
+  - healpercent{m=1} @self
+RafagaMakara:
+  cooldown: 60
+  Skills:
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=60;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+Makarakill:
+   Cooldown: 180
+   Skills:
+     - effect:sound

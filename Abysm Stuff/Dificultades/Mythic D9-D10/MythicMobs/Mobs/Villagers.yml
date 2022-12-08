@@ -1,0 +1,21 @@
+MerchantTest:
+  Type: VILLAGER
+  Display: '&6Merchant Test'
+  Health: 20
+  Faction: tester 
+  Options:
+    Profession: CLERIC
+    Type: DESERT
+    Level: 2
+    Invulnerable: true
+  Trades:
+    1:
+      Item1: 5 EMERALD
+      Item2: 5 DIAMOND
+      Result: totemmistico
+      MaxUses: 5
+    2:
+      Item1: 64 EMERALD
+      Result: totemmistico
+      MaxUses: 1
+

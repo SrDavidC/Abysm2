@@ -1,0 +1,75 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+RandomSniperSkeleton:
+  MobType: SniperSkeleton
+  Chance: 0.5
+  Action: REPLACE
+  Conditions:
+  - entitytype{t=SKELETON} true
+  Reason: NATURAL
+
+RandomTankSkeleton:
+  MobType: TankSkeleton
+  Chance: 0.3
+  Action: REPLACE
+  Conditions:
+  - entitytype{t=SKELETON} true
+  Reason: NATURAL
+  
+RandomExtasisSkeleton:
+  MobType: ExtasisSkeleton
+  Chance: 0.5
+  Action: REPLACE
+  Conditions:
+  - entitytype{t=SKELETON} true
+  Reason: NATURAL
+
+RandomSansSkeleton:
+  Mobtype: SansSkeleton
+  Chance: 0.5
+  Action: REPLACE
+  Conditions:
+  - entitytype{t=SKELETON} true
+  Reason: NATURAL
+
+CreeperNether:
+  MobType: NetherCreeper
+  Action: REPLACE
+  Reason: NATURAL
+  Chance: 0.5
+  Worlds: world_nether
+
+ENDCREEPER:
+  MobType: ENDCREEPER
+  Action: REPLACE
+  Reason: NATURAL
+  Chance: 0.5
+  Worlds: world_the_end
+
+HANSPETSPAWN:
+  MobType: HANSPET
+  Action: REPLACE
+  Reason: NATURAL
+  Priority: 128
+  Conditions:
+  - entitytype{t=ENDER_DRAGON} true
+
+GloriusPigSpawn:
+  MobType: GloriusPig
+  Action: ADD
+  Reason: NATURAL
+  Chance: 0.5
+  Priority: 1
+  Conditions:
+  - entitytype{t=PIG} true
+
+SkeletonPillagerSpawn:
+  Mobtype: SkeletonPillager
+  Action: REPLACE
+  Reason: CUSTOM
+  Chance: 0.5
+  Conditions:
+  - entitytype{t=VINDICATOR} true
+

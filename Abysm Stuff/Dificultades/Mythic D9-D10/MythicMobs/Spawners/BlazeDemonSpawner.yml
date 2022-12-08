@@ -1,0 +1,27 @@
+BlazeDemonSpawner:
+  MobName: DemonBlaze
+  World: world_the_end
+  X: 0
+  Y: 0
+  Z: 0
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '2'
+  MobLevel: '1'
+  MobsPerSpawn: 2
+  Cooldown: 6000
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 60
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: true
+  Conditions: []
+  ActiveMobs: 0

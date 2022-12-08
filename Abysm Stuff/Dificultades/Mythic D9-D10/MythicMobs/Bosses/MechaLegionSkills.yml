@@ -1,0 +1,66 @@
+SlamCrash:
+  Cooldown: 10
+  Skills:
+  - leap{velocity=200} @target
+  - delay 20
+  - jump{velocity=-100}
+  - effect:explosion @self
+  - damage{amount=15} @EntitiesInRadius{r=5}
+Whirlwind:
+  Cooldown: 8
+  Skills:
+  - runaitargetselector{target=clear}
+  - effect:spin{duration=60;velocity=40} @self
+  - effect:particlebox{particle=flame;amount=100;radius=2} @self
+  - potion{type=SLOW;duration=60;level=2}
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+  - delay 10
+  - damage{amount=5} @EntitiesInRadius{r=2}
+Subjugation:
+  Cooldown: 10
+  Skills:
+  - prison{material=IRON_BLOCK;duration=200} @target
+  - effect:blockmask{m=bedrock;r=2;d=200} @target
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target
+  - delay 20
+  - damage{amount=1;ignoreArmor=false} @target
+  - effect:explosion @target

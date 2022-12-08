@@ -1,0 +1,239 @@
+ElementalWizard:
+  Type: ZOMBIE
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Health: 2500
+  Damage: 1
+  Disguise:
+    Type: player
+    Player: blase_flemme
+    Skin: blase_flemme
+  Skills:
+    - skill{s=SkillStart} ~onSpawn
+    - skill{s=TurretPhaseBegin} =75%
+    - skill{s=MinePhaseBegin} =50%
+    - skill{s=FinaleBegin} =25%
+    - teleportto{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*} ~onSpawn @self
+  Options:
+    PreventTransformation: true
+    PreventJockeyMounts: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    Silent: true
+    KnockbackResistance: 999999999999
+    MovementSpeed: -99999
+    AttackSpeed: 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&5&l-&1&l&k-&5&l-&1&l&k-&5&l- &1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l, &5&lG&1&lr&5&la&1&ln&5&ld &1&lA&5&lr&1&lc&5&lh&1&lm&5&la&1&lg&5&le &1&l-&5&l&k-&1&l-&5&l&k-&1&l-'
+    Range: 50
+    Color: BLUE
+    Style: SEGMENTED_20
+ElementalWizardFinale:
+  Type: ZOMBIE
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Health: 2500
+  Damage: 1
+  Disguise:
+    Type: player
+    Player: blase_flemme
+    Skin: blase_flemme
+  Skills:
+    - skill{s=FinaleBeginP2} ~onSpawn
+    - damage{a=1875} ~onSpawn @self
+    - teleportto{c=*Insert Yourself*,*Insert Yourself*,*Insert Yourself*} ~onSpawn @self
+  Options:
+    PreventTransformation: true
+    PreventJockeyMounts: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    Silent: true
+    KnockbackResistance: 999999999999
+    MovementSpeed: -99999
+    AttackSpeed: 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&5&l-&1&l&k-&5&l-&1&l&k-&5&l- &1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l, &5&lG&1&lr&5&la&1&ln&5&ld &1&lA&5&lr&1&lc&5&lh&1&lm&5&la&1&lg&5&le &1&l-&5&l&k-&1&l-&5&l&k-&1&l-'
+    Range: 50
+    Color: BLUE
+    Style: SEGMENTED_20
+TestMobE:
+  Type: ARMOR_STAND
+  Display: '&f&lTest'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=9999999} @self ~onSpawn
+  - skill{s=TestSkill} ~onSpawn 1
+FireHomingDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=200} @self ~onSpawn
+  - skill{s=FireHoming} ~onSpawn 1
+TurretDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=9999999} @self ~onSpawn
+  - skill{s=TurretStart} ~onSpawn 1
+FireTurret:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+  - skill{s=FireTurretProjectile;repeat=10;repeatInterval=100} ~onSpawn
+  - effect:particlesphere{particle=flame;amount=250;radius=1.5;repeat=200;repeatInterval=5} @self ~onSpawn
+WaterTurret:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+  - skill{s=WaterTurretProjectile;repeat=10;repeatInterval=100} ~onSpawn
+  - effect:particlesphere{particle=bubble;amount=1000;radius=1.5;repeat=200;repeatInterval=5} @self ~onSpawn
+EarthTurret:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+  - skill{s=EarthTurretProjectile;repeat=10;repeatInterval=100} ~onSpawn
+  - effect:particlesphere{particle=crit;amount=300;radius=1.5;repeat=200;repeatInterval=5} @self ~onSpawn
+FireLobDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=FireLob} ~onSpawn 1
+FireLobTwoDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=FireLobTwo} ~onSpawn 1
+WaterLobDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=WaterLob} ~onSpawn 1
+WaterLobTwoDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=WaterLobTwo} ~onSpawn 1
+EarthLobDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=EarthLob} ~onSpawn 1
+EarthLobTwoDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=EarthLobTwo} ~onSpawn 1
+LightLobDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=LightLob} ~onSpawn 1
+LightLobTwoDummy:
+  Type: ARMOR_STAND
+  Display: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     Invisible: true
+     HasGravity: false
+     Marker: true
+  Skills: 
+  - remove{delay=400} @self ~onSpawn
+  - skill{s=LightLobTwo} ~onSpawn 1
+MineDummy:
+  Type: ARMOR_STAND
+  Displaly: '&1&lA&5&ll&1&ld&5&lo&1&ll&5&lf &1&lV&5&la&1&ln &5&lA&1&ls&5&lt&1&le&5&lr&1&li&5&la&1&l'
+  Options:
+     NoAI: true
+     HasGravity: false
+     Marker: true
+  Skills:
+  - remove{delay=10000} @self ~onSpawn
+  - skill{s=MineAttack} ~onTimer:1
+  Disguise:
+    Type: end_crystal

@@ -1,0 +1,19 @@
+SkeletonPillager:
+  Type: PILLAGER
+  Display: '&7&lPILLAGER SKELETON'
+  Health: 120
+  BossBar:
+    Enabled: true
+    Title: '&7&lPILLAGER SKELETON'
+    Range: 120
+    Color: WHITE
+    Style: SOLID
+  Options:
+    PreventRename: true
+  Skills:
+  - skill{s=SkeletonStampide} @self 
+  - skill{s=LentitudeSK} @self
+  - skill{s=SaveLocation} @self ~onSpawn
+  - message{m="&7&l<&skull> A PillagerSkeleton has appeared at &d&l<caster.var.SpawnLoc>"} @Server ~onSpawn
+  Equipment:
+  - AIR HAND 

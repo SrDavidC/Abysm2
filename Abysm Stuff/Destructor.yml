@@ -1,0 +1,269 @@
+#---------------------------------------------------------------------------#
+#                          Made by: ButterflyBullets                        #
+#---------------------------------------------------------------------------#
+
+
+
+#---------------------------------------------------------------------------#
+#                          {The Destructor(s) MOB}                          #
+#---------------------------------------------------------------------------#
+
+Destructor:
+  Type: WITHER
+  Health: 1000
+  Display: '&4The Destructor Lvl - <mob.level>'
+  Damage: 10
+  Skills:
+  - skill{s=Destructor} @self 0.1
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=ArrowBarrage} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - summon{type=BrokenDestructor;a=3} @self ~onDeath
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:200
+  - lightning @PlayersInRadius{r=10;d=20} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  LevelModifiers:
+  - Health: 500
+  - Damage: 50
+  KillMessages:
+  - '<target.name> withered from the inside out by the <mob.name>'
+  
+BrokenDestructor:
+  Type: WITHER
+  Health: 500
+  Display: '&4&lBroken &5&lDestructor'
+  Damage: 50
+  Skills:
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=ArrowBarrage} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - summon{type=MiniDestructor;a=3} @self ~onDeath
+  - skill{s=Wither} @self 0.1
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:30
+  - lightning @PlayersInRadius{r=10;d=10} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  Drops:
+  - DestructorDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  KillMessages:
+  - '<target.name> was eroded by a <mob.name>'
+  
+MiniDestructor:
+  Type: WITHER
+  Health: 250
+  Display: '&4Mini &5Destructor'
+  Damage: 25
+  Skills:
+  - skill{s=DoomBrigade} @self 0.1
+  - skill{s=SonicBoom} @self 0.1
+  - skill{s=RaiseUndead} @self 0.1
+  - skill{s=ArrowBarrage} @self 0.1
+  - skill{s=Freeze} @self 0.1
+  - skill{s=Wither} @self 0.1
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:30
+  - lightning @PlayersInRadius{r=10;d=5} ~onDeath
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    Despawn: false
+  Drops:
+  - MiniDestructorDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookaround
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  - 3 villagers
+  - 4 golem
+  KillMessages:
+  - '<target.name> was broken down to atoms by aa <mob.name>'
+
+#---------------------------------------------------------------------------#
+#                          {The Destructor(s) SKILLS}                       #
+#---------------------------------------------------------------------------#
+
+Destructor:
+  Cooldown: 1
+  Conditions:
+  - targetwithin 100
+  Skills:
+  - setlevel{a=add;l=1} ~onKillPlayer
+  - weather{type=storm;duration=3000} ~onSpawn
+  - lightning @PlayersInRadius{r=10;d=1} ~onTimer:30
+  - delay 6000
+ - randomskill{skills=ArrowBarrage,Freeze,RaiseUndead,SonicBoom,DoomBrigade}
+
+ArrowBarrage:
+  Cooldown: 15
+  Skills:
+  - shoot{type=ARROW;velocity=5;damage=10} @Target
+  - delay 20
+  - shoot{type=ARROW;velocity=5;damage=10} @Target
+  - delay 20
+  - shoot{type=ARROW;velocity=5;damage=10} @Target
+  - delay 20
+  - shoot{type=ARROW;velocity=5;damage=10} @Target
+  - delay 20
+  - shoot{type=ARROW;velocity=5;damage=10} @Target
+
+Freeze:
+  Cooldown: 45
+  Skills:
+  - stun{d=100;f=true;cot=true;coq=true} @PIR{r=5}
+  - lightning @PlayersInRadius{r=10;d=0}
+
+RaiseUndead:
+  Cooldown: 60
+  Skills:
+  - summon{type=SKELETON;amount=3;radius=4;l=5} @PIR{r=20}
+  - delay 20
+  - summon{type=ZOMBIE;amount=3;radius=4;l=5} @PIR{r=20}
+  - delay 20
+  - summon{type=STRAY;amount=3;radius=4;l=5} @PIR{r=20}
+  - delay 20
+  - summon{type=HUSK;amount=3;radius=4;l=5} @PIR{r=20}
+  - delay 20
+  - summon{type=DROWNED;amount=3;radius=4;l=5} @PIR{r=20}
+  - delay 100
+
+SonicBoom:
+  Cooldown: 50
+  Skills:
+  - throw{velocity=5;velocityY=5} @PIR{r=10}
+  - damage{a=50;i=false} @PIR{r=10}
+  - effect:particles{p=hugeexplode;a=5;vs=0.5;hs=0.5;s=0;y=1} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=0.5} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=1} @Self
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=3} @Self
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=5} @Self
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=7} @Self
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=9} @Self
+  - delay 2
+  - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=11} @Self
+
+DoomBrigade:
+  Cooldown: 100
+  Skills:
+  - shootskull{y=2;v=4} @target
+  - delay 10
+  - shootfireball{y=1;v=4;i=true;ft=50;sml=true} @target
+  - delay 10
+  - shootskull{y=2;v=7} @target
+  - delay 10
+  - shootfireball{y=2;v=7;i=true;ft=100} @target
+  - delay 10
+  - shootskull{y=3;v=10} @target
+  - delay 10
+  - shootfireball{y=3;v=10;i=true;ft=150} @target
+  - delay 10
+  - shootskull{y=4;v=15} @target
+  - delay 10
+  - shootfireball{y=4;v=15;i=true;ft=200} @target
+  - delay 10
+  - shootskull{y=5;v=20} @target
+  - delay 10
+  - shootfireball{y=5;v=20;i=true;ft=250} @target
+  - delay 10
+  - shootskull{y=2;v=4} @target
+  - delay 10
+  - shootfireball{y=1;v=4;i=true;ft=50;sml=true} @target
+  - delay 10
+  - shootskull{y=2;v=7} @target
+  - delay 10
+  - shootfireball{y=2;v=7;i=true;ft=100} @target
+  - delay 10
+  - shootskull{y=3;v=10} @target
+  - delay 10
+  - shootfireball{y=3;v=10;i=true;ft=150} @target
+  - delay 10
+  - shootskull{y=4;v=15} @target
+  - delay 10
+  - shootfireball{y=4;v=15;i=true;ft=200} @target
+  - delay 10
+  - shootskull{y=5;v=20} @target
+  - delay 10
+  - shootfireball{y=5;v=20;i=true;ft=250} @target
+  
+SecondLife:
+  Skills:
+  - summon{type=BrokenDestructor;amount=3;radius=5} @PIR{r=20}
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+  - delay 10
+  - lightning @PlayersInRadius{r=10;d=5}
+
+Wither:
+  Skills:
+  - potion{type=WITHER;duration=10;level=3} @PIR{r=3}
+
+DSecondLife:
+  Skills:
+  - summon{type=MiniDestructor;amount=3;radius=6} @PIR{r=20} ~onDeath
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}
+  - delay 5
+  - lightning @PlayersInRadius{r=10;d=3}

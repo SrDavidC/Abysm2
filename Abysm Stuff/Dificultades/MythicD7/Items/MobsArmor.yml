@@ -1,0 +1,20 @@
+COS_BlackHead:
+  Id: 298
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackChest:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackLegs:
+  Id: 300
+  Data: 0
+  Options:
+    Color: 10,10,10
+COS_BlackFeet:
+  Id: 301
+  Data: 0
+  Options:
+    Color: 10,10,10   

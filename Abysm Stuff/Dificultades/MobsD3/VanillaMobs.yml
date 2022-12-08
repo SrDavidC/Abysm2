@@ -1,0 +1,26 @@
+Zombie:
+  Health: 20
+  Damage: 3
+  Drops:
+  - ROTTEN_FLESH 1to3 0.5
+  LevelModifiers:
+  - health 2
+  - damage 0.5
+SKELETON:
+  Health: 20
+  Damage: 3
+  LevelModifiers:
+  - health 2
+  - damage 0.5
+  Skills:
+    - potion{type=SPEED;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=JUMP;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=INCREASE_DAMAGE;duration=630720000;level=0} @Self ~onSpawn
+
+CREEPER:
+  Health: 20
+  Options:
+    Persistent: true
+    PreventRenaming: true
+    
+

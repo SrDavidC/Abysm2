@@ -1,0 +1,12 @@
+SNIPERBOW:
+  Id: 261	
+  Data: 0
+  Display: '&7SNIPER ACCURACY BOW'
+  Lore:
+  - '&6A powerful bow used by'
+  - '&6the Sniper of Skeletons.'
+  - '&4IF YOU GET THIS INFORM TO AN ADMIN NOW'
+  Enchantments:
+  - ARROW_DAMAGE:10
+  
+

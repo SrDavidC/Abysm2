@@ -1,0 +1,21 @@
+ArrowExplosion:
+  Skills:
+  - projectile{oE=ArrowExplosion-oE;oT=ArrowExplosion-Tick;v=8;i=1;hR=1;vR=1}
+
+ArrowExplosion-oE:
+  Skills:
+  - explosion{yield=2;bd=true} @Target
+    
+
+ArrowExplosion-Tick:
+    Skills:
+    - effect:particles{p=flame;a=5;hS=0;vS=0;s=1}
+
+
+ArrowBarrage:
+  Skills:
+  - shoot{type=ARROW;velocity=5;damage=5}
+  - delay 10
+  - shoot{type=ARROW;velocity=5;damage=5}
+  - delay 20
+

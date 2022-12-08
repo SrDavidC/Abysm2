@@ -1,0 +1,36 @@
+SNIPERBOW:
+  Id: 261	
+  Data: 0
+  Display: '&7SNIPER ACCURACY BOW'
+  Lore:
+  - '&6A powerful bow used by'
+  - '&6the Sniper of Skeletons.'
+  - '&4IF YOU GET THIS INFORM TO AN ADMIN NOW'
+  Enchantments:
+  - ARROW_DAMAGE:10
+  
+RP_SWORDSHARP:
+  Id: 276	
+  Data: 0
+  Display: '§3§l EXPERIMENTAL SWORD'
+  Lore:
+  - '§b An experimental sword maked by'
+  - '§4 HAN'
+  - '§b SHARP VERSION'
+  Enchantments:
+  - DAMAGE_ALL:2
+  Options:
+    Unbreakable: true
+
+RP_SWORDSFIRE:
+  Id: 283	
+  Data: 0
+  Display: '§c§l EXPERIMENTAL SWORD'
+  Lore:
+  - '§c An experimental sword maked by'
+  - '§4§l HAN'
+  - '§c FIRE VERSION'
+  Enchantments:
+  - FIRE_ASPECT:4
+  Options:
+    Unbreakable: true

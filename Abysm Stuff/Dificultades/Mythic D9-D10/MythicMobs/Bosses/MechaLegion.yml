@@ -1,0 +1,234 @@
+mecha_sentinel:
+  Type: zombie
+  Display: '&6&lSentinel'
+  Health: 150
+  Damage: 12
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    FollowRange: 64
+    KnockbackResistance: 0.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventLeashing: false
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Equipment:
+    - iron_sword hand
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 lookatplayers
+    - 3 randomlookaround
+    - 4 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 OtherFactionMonsters
+    - 2 attackers
+  Disguise:
+    Type: player
+    Skin: robot0007
+  Skills:
+  - summon{type=mecha_sentinel_revived} @self ~onDeath
+  - effect:blockmask{m=obsidian;r=2;d=200} @self ~onDeath
+  - sound{entity.irongolem.hurt} @self ~onDamaged
+  - sound{entity.wither.spawn} @self ~onDeath
+mecha_sentinel_revived:
+  Type: zombie
+  Display: '&6&lSentinel✦'
+  Health: 250
+  Damage: 12
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    FollowRange: 64
+    KnockbackResistance: 0.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventLeashing: false
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Equipment:
+    - iron_sword hand
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 lookatplayers
+    - 3 randomlookaround
+    - 4 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 OtherFactionMonsters
+    - 2 attackers
+  Disguise:
+    Type: player
+    Skin: robot0007
+  Skills:
+  - damage{amount=15} @LivingEntitiesInRadius{r=6} ~onSpawn
+  - throw{velocity=12;velocityY=12} @LivingEntitiesInRadius{r=6} ~onSpawn
+  - effect:particlebox{particle=flame;amount=100;radius=2} @self ~onTimer:20
+  - explosion{yield=4;bd=false;fire=t} @self ~onDeath
+  - sound{entity.irongolem.hurt} @self ~onDamaged
+  - sound{entity.wither.death} @self ~onDeath
+mecha_warslammer:
+  Type: zombie
+  Display: '&6&lWarslammer'
+  Health: 150
+  Damage: 12
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    FollowRange: 64
+    KnockbackResistance: 0.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventLeashing: false
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Equipment:
+    - iron_axe hand
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 lookatplayers
+    - 3 randomlookaround
+    - 4 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 OtherFactionMonsters
+    - 2 attackers
+  Disguise:
+    Type: player
+    Skin: robot0007
+  Skills:
+  - skill{skill=SlamCrash} @Target ~onAttack
+  - sound{entity.irongolem.hurt} @self ~onDamaged
+  - sound{entity.wither.death} @self ~onDeath
+mecha_whirlwinder:
+  Type: zombie
+  Display: '&6&lWhirlwinder'
+  Health: 150
+  Damage: 12
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    FollowRange: 64
+    KnockbackResistance: 0.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventLeashing: false
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Equipment:
+    - diamond_axe hand
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 lookatplayers
+    - 3 randomlookaround
+    - 4 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 OtherFactionMonsters
+    - 2 attackers
+  Disguise:
+    Type: player
+    Skin: robot0007
+  Skills:
+  - skill{skill=Whirlwind} @Target ~onAttack
+  - sound{entity.irongolem.hurt} @self ~onDamaged
+  - sound{entity.wither.death} @self ~onDeath
+mecha_subjugator:
+  Type: zombie
+  Display: '&6&lSubjugator'
+  Health: 300
+  Damage: 1
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    FollowRange: 64
+    KnockbackResistance: 0.3
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventLeashing: false
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Equipment:
+    - diamond_sword hand
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 lookatplayers
+    - 3 randomlookaround
+    - 4 randomstroll
+  AITargetSelectors:
+    - 0 clear
+    - 1 OtherFactionMonsters
+    - 2 attackers
+  Disguise:
+    Type: player
+    Skin: robot0007
+  Skills:
+  - skill{skill=Subjugation} @Target ~onAttack
+  - sound{entity.irongolem.hurt} @self ~onDamaged
+  - sound{entity.wither.spawn} @self ~onDeath
+mecha_assembly:
+  Type: zombie
+  Display: '&6&lMecha Assembly'
+  Health: 2000
+  Damage: 0
+  Faction: mechalegion
+  Options:
+    Collidable: false
+    Despawn: false
+    NoAI: true
+    PreventMobKillDrops: true
+    PreventSunburn: true
+    Silent: true
+    Invincible: true
+  Disguise:
+    Type: block
+    Block: NETHERITE_BLOCK
+    BlockData: 0
+    ShowName: true
+  Skills:
+  - summon{type=mecha_sentinel;amount=8;radius=4} @SelfLocation ~onInteract
+  - summon{type=mecha_warslammer;amount=4;radius=4} @SelfLocation ~onInteract
+  - summon{type=mecha_whirlwinder;amount=3;radius=4} @SelfLocation ~onInteract
+  - summon{type=mecha_subjugator;amount=3;radius=4} @SelfLocation ~onInteract
+  - remove @self ~onInteract

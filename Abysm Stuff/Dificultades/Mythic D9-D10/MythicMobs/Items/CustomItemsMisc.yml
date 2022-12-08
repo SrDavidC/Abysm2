@@ -1,0 +1,16 @@
+asd:
+  id: 7
+  NBT:
+    Base:
+      totem: 1
+  Display: 'MYSTICAL TOTEM'
+totemmistico:
+  id: 449	
+  Display: '&9&lTOTEM MISTICO'
+  NBT:
+    Base:
+      totem: 1
+superGoldeApple:
+  Id: golden_apple	
+  Display: '&5&lSUPER GOLDEN APPLE'
+  Lore: '&5Una manzana creada por los mismos dioses'

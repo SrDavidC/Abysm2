@@ -1,0 +1,31 @@
+ArrowExplosion:
+  Skills:
+  - projectile{oE=ArrowExplosion-oE;oT=ArrowExplosion-Tick;v=8;i=1;hR=1;vR=1}
+
+ArrowExplosion-oE:
+  Skills:
+  - explosion{yield=0.5;bd=true} @Target
+    
+
+ArrowExplosion-Tick:
+  Skills:
+  - effect:particles{p=flame;a=5;hS=0;vS=0;s=1}
+
+SkeletonStampide:
+  Cooldown: 15
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> SKELETONS!"} @PlayersInRadius{r=40}
+  - summon{type=ExtasisSkeleton;amount=8;radius=8;l=5} @PIR{r=20}
+
+LentitudeSK:
+  Cooldown: 10
+  Skills:
+  - potion{type=SLOW;duration=200;level=1}
+  - freeze{ticks=100} @trigger ~onAttack
+  - sound{s=entity.player.hurt_freeze;v=16} @PIR{r=15} ~onShoot 0.5}
+  - totemofundying{model=2} @Self
+
+SummonPillagerSK:
+  Cooldown: 30
+  Skills:
+  - summon{t=SkeletonPillager;amount=1;radius=2;l=1} @self 

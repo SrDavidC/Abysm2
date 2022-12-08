@@ -1,0 +1,101 @@
+Zombie:
+  Health: 50
+  Damage: 10
+  Drops:
+  - ROTTEN_FLESH 1to3 0.5
+  LevelModifiers:
+  - health 2
+  - damage 0.5
+
+SKELETON:
+  Health: 40
+  Damage: 7
+  Skills:
+    - potion{type=SPEED;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=JUMP;duration=630720000;level=1} @Self ~onSpawn
+    - potion{type=INCREASE_DAMAGE;duration=630720000;level=0} @Self ~onSpawn
+
+DROWNED:
+  Health: 25
+  Damage: 1
+  Equipment:
+    - TRIDENT HAND
+  Drops:
+  - ROTTEN_FLESH 1to3 0.5
+  - GOLD_INGOT 1to2 0.10
+  - TRIDENT 1 0.10
+  Options:
+    PreventOtherDrops: true
+
+HOGLIN:
+  Health: 120
+
+RAVAGER:
+  Health: 300
+  Drops:
+  - TOTEM_OF_UNDYING 1to1 1
+  - GOLD_INGOT 1to6 0.30
+
+EVOKER:
+  Health: 120
+  Drops:
+   - EMERALD 4to8 0.5
+  Options:
+    PreventOtherDrops: true
+
+SILVERFISH:
+  Health: 18
+  Damage: 8
+  Skills:
+    - potion{type=INCREASE_DAMAGE;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=SPEED;duration=630720000;level=1} @Self ~onSpawn
+
+ENDERMITE:
+  Health: 18
+  Damage: 8
+  Skills:
+    - potion{type=INCREASE_DAMAGE;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=SPEED;duration=630720000;level=1} @Self ~onSpawn
+
+PILLAGER:
+  Damage: 8
+  Drops:
+  - GOLD_INGOT 1to4 0.25
+
+VINDICATOR:
+  Damage: 9
+  Skills:
+    - skill{s=SummonPillagerSK} @self ~onSpawn 0.15
+  
+
+BLAZE:
+  Drops:
+  - GOLD_INGOT 1to4 1
+
+ENDERMAN:
+  Display: '&5&lExperimental Demon'
+  Damage: 20
+  Option:
+  - PreventRenaming: true
+  Skills:
+    - potion{type=SPEED;duration=630720000;level=0} @Self ~onSpawn
+    - potion{type=INCREASE_DAMAGE;duration=630720000;level=2} @Self ~onSpawn
+  
+ENDER_DRAGON:
+  Display: '&6&lRESURRECTED Ancient Dragon &4&lWRATH'
+  Health: 600
+  Skills:
+    - skill{s=SummonSk} @self 0.4
+    - skill{s=SummonTNT} @self 0.4
+    - skill{s=SummonLights} @self 0.8
+    - skill{s=SummonNightVision} @self 0.9 
+    - sethealth{a=2000} @self ~onSpawn
+
+CREEPER:
+  Options:
+    ExplosionRadius: 5
+
+GHAST:
+  Healt: 30
+
+
